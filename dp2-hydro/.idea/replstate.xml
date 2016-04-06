@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ReplState" timestamp="1459955319935">{:repl-history {:ide [], :local [&quot;(p1 15)\n    &quot; &quot;(p1 50)\n    &quot; &quot;(p1 14)&quot; &quot;(p1 51)&quot; &quot;(p1 50)&quot; &quot;(p1 30)&quot; &quot;(p1 15)&quot; &quot;(p1 55)&quot; &quot;(p1 40)&quot; &quot;(p1 80)&quot; &quot;(p1 60)&quot; &quot;water-total&quot; &quot;water-range&quot; &quot;turnines&quot; &quot;(nth turbines 1)&quot; &quot;( (nth turbines 1) 10) &quot; &quot;(p1 10)&quot; &quot;turbines&quot; &quot;( (nth turbines 0) 10) &quot; &quot;(main)&quot; &quot;(defn main\n  \&quot;Launch optimization solution\&quot;\n  []\n  (maximize-production turbines-list (repeat (count state-range) 0)))&quot; &quot;(-main)\n  &quot;], :remote []}}</component>
+</project>
