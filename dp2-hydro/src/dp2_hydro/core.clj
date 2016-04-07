@@ -46,45 +46,84 @@
 
 
 (def granularity 5)
-(def water-total 135)
 (def decision-range (range 0 (+ max-water-capacity granularity) granularity))
-(def state-range (range 0 (+ water-total granularity) granularity))
-(def turbines-list (list p1 p3 p2))
 
 
+(defn state-range-factory
+  "create state ranges with a range of water-total"
+  [water-total-range]
+  (mapv
+    (fn [water-total] (range 0 (+ water-total granularity) granularity))
+    water-total-range))
+
+
+(def turbines-list (list
+                     {:tag 3 :fn p3}
+                     {:tag 2 :fn p2}
+                     {:tag 1 :fn p1}))
+
+
+(defn max-production-sequence
+  "max produciton from a list of sequence"
+  [production-sequences]
+  (reduce (fn [pp1 pp2] (if (> ( (first pp1) :p) ( (first pp2) :p)) pp1 pp2)) [{:p 0}] production-sequences))
+
+
+
+(defn find-best-production-for-state
+  "Find best production in vector"
+  [s production-fn best-next-productions turbine-tag]
+  (max-production-sequence
+          (mapv (fn [x]
+                  (let [water-after (- s x)]
+                    ;we first look if there is any water after usages of this turbine
+                    (if (> water-after 0)
+                      (let [best-next (nth best-next-productions (/ water-after granularity))]
+                        (into [{:turbine turbine-tag
+                                :p (+ (production-fn x)
+                                      ((first best-next) :p))
+                                :s s :x x}]
+                              best-next))
+                      (if (= water-after 0)
+                        ;if there is no water afeter turnine n then no need to look for next productions
+                        [{:turbine turbine-tag :p (production-fn x) :s s :x x}]
+                        ;s - x can be negative, we handle this case by setting a 0 production
+                        [{:turbine turbine-tag :p 0 :s s :x x}]))))
+                decision-range)))
 
 
 (defn calculate-best-productions
   "calculate best productions with given production function"
-  [production-fn best-next-productions]
+  [production-fn best-next-productions turbine-tag state-range]
   (mapv (fn [s]
-         (apply max-key :p
-           (mapv (fn [x]
-                    ;s - x can be negative, we handle this case by setting a low prod
-                    (let [water-after (- s x)]
-                      (if (> water-after 0)
-                        {:p (+ (production-fn x)
-                               ((nth best-next-productions (/ water-after granularity)) :p))
-                         :s s :x x}
-                        (if (= water-after 0)
-                          {:p (production-fn x) :s s :x x}
-                          {:p 0 :s s :x x}))))
-                decision-range)))
+          (find-best-production-for-state s production-fn best-next-productions turbine-tag))
         state-range))
-
-
 
 (defn maximize-production
   "maximize electric production with given water quantity"
-  [turbines best-next-productions]
-  (let [best-productions (calculate-best-productions (first turbines) best-next-productions)]
-    (if (> (count turbines) 1)
-      (maximize-production (rest turbines) best-productions)
-      best-productions)))
+  [turbines best-next-productions state-range]
+  (let [turbines-count (count turbines)
+        current-turbine (first turbines)
+        best-productions (calculate-best-productions
+                           (current-turbine :fn)
+                           best-next-productions (current-turbine :tag)
+                           state-range)]
+    (if (> turbines-count 1)
+      (maximize-production (rest turbines) best-productions state-range)
+      (max-production-sequence best-productions))))
 
 
 (defn -main
   "Launch optimization solution"
   []
-  (maximize-production turbines-list (repeat (count state-range) {:p 0})))
+  (let [solution (mapv (fn [sate-range] (maximize-production turbines-list (repeat (count sate-range) [{:p 0}]) sate-range))
+                       (state-range-factory (range 50 215 5)))]
+    (mapv (fn [partial-solution]
+            (subs
+              (reduce (fn [cumm turbine] (str cumm "," (turbine :x)))
+                    ""
+                    partial-solution) 1))
+          solution)))
+
+
 

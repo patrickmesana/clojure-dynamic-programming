@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac37c7f-9c9e-463c-9854-3a810475166c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__clojure_complete_0_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_clojure_1_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_tools_nrepl_0_2_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/replstate.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/replstate.xml" afterPath="$PROJECT_DIR$/.idea/replstate.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dp2_hydro/core.clj" afterPath="$PROJECT_DIR$/src/dp2_hydro/core.clj" />
     </list>
     <ignored path="dp2-hydro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,18 +28,8 @@
       <file leaf-file-name="core.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dp2_hydro/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="388">
+              <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -67,8 +54,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="145" />
-    <option name="y" value="26" />
+    <option name="x" value="141" />
+    <option name="y" value="23" />
     <option name="width" value="1148" />
     <option name="height" value="873" />
   </component>
@@ -165,7 +152,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="ReplState" timestamp="1459955319935">{:repl-history {:ide [], :local [&quot;(p1 15)\n    &quot; &quot;(p1 50)\n    &quot; &quot;(p1 14)&quot; &quot;(p1 51)&quot; &quot;(p1 50)&quot; &quot;(p1 30)&quot; &quot;(p1 15)&quot; &quot;(p1 55)&quot; &quot;(p1 40)&quot; &quot;(p1 80)&quot; &quot;(p1 60)&quot; &quot;water-total&quot; &quot;water-range&quot; &quot;turnines&quot; &quot;(nth turbines 1)&quot; &quot;( (nth turbines 1) 10) &quot; &quot;(p1 10)&quot; &quot;turbines&quot; &quot;( (nth turbines 0) 10) &quot; &quot;(main)&quot; &quot;(defn main\n  \&quot;Launch optimization solution\&quot;\n  []\n  (maximize-production turbines-list (repeat (count state-range) 0)))&quot; &quot;(-main)\n  &quot;], :remote []}}</component>
+  <component name="ReplState" timestamp="1460009414767">{:repl-history {:ide [], :local [&quot;(p1 (range 50 215 5))&quot; &quot;(map p1 (range 50 215 5))&quot; &quot;(p1 15)\n    &quot; &quot;(p1 50)\n    &quot; &quot;(p1 14)&quot; &quot;(p1 51)&quot; &quot;(p1 50)&quot; &quot;(p1 30)&quot; &quot;(p1 15)&quot; &quot;(p1 55)&quot; &quot;(p1 40)&quot; &quot;(p1 80)&quot; &quot;(p1 60)&quot; &quot;water-total&quot; &quot;water-range&quot; &quot;turnines&quot; &quot;(nth turbines 1)&quot; &quot;( (nth turbines 1) 10) &quot; &quot;(p1 10)&quot; &quot;turbines&quot; &quot;( (nth turbines 0) 10) &quot; &quot;(main)&quot; &quot;(defn main\n  \&quot;Launch optimization solution\&quot;\n  []\n  (maximize-production turbines-list (repeat (count state-range) 0)))&quot; &quot;(repeat (count state-range) 0)&quot; &quot;(calculate-best-productions p1 (repeat (count state-range) 0))\n                            &quot; &quot;(calculate-best-productions p1 (repeat (count state-range) {:p 0}))\n                            &quot; &quot;({:p 10} :p)&quot; &quot;(repeat (count state-range) {:p 0 :x 0 :s 0})&quot; &quot;(calculate-best-productions p1 (repeat (count state-range) {:p 0 :x 0 :s 0}))\n                            &quot; &quot;(into [1 2 3] [4 5])&quot; &quot;(into [1 2 3] [4 5] [7 8])&quot; &quot;(into [4 5] [7 8])&quot; &quot;(print-stack-trace *e 5)&quot; &quot;(first [])\n        &quot; &quot;sand1&quot; &quot;(sand1)\n  &quot; &quot;(-main)&quot; &quot;(max-key :p [{:p 1} {:p 2}])&quot; &quot;(apply max-key :p [{:p 1} {:p 2}])&quot; &quot;(print-stack-trace *e 9)\n                   &quot; &quot;(sand2)\n  &quot; &quot;(sand1)\n  \n  &quot; &quot;(print-stack-trace *e)\n                   &quot; &quot;(use 'clojure.stacktrace)  &quot; &quot;(sand1)&quot; &quot;(range 135 135 5)&quot; &quot;(range 135 135 0)&quot; &quot;(range 130 135 5)&quot; &quot;(range 135 134 5)&quot; &quot;(range 135 140 5)&quot; &quot;(print-stack-trace *e)\n                   \n                   &quot; &quot;(range 50 210 5)&quot; &quot;(-main)\n  &quot;], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.REPL for dp2-hydro">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -521,7 +508,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="145" y="26" width="1148" height="873" extended-state="0" />
+    <frame x="141" y="23" width="1148" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -531,7 +518,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39952996" sideWeight="0.5139373" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39952996" sideWeight="0.5348432" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.4965157" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -543,7 +530,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39952996" sideWeight="0.4860627" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39952996" sideWeight="0.4651568" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -565,7 +552,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -582,18 +569,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.8.0/clojure-1.8.0.jar!/clojure/core.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="366" column="6" selection-start-line="366" selection-start-column="6" selection-end-line="366" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/xk/nzzxd9s569b_snnvhlwqmjkc0000gn/T/form-init7496803604392434877.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.8.0/clojure-1.8.0.jar!/clojure/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="640" column="0" selection-start-line="640" selection-start-column="0" selection-end-line="640" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -607,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dp2_hydro/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+        <state relative-caret-position="388">
+          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
           <folding />
         </state>
       </provider>
